@@ -14,7 +14,9 @@ const PORT =process.env.PORT;
 app.use('/', require('./routes/index'));
 
 
-
+app.get("/", (req, res, next) => {
+    res.send("<h1>Working</h1>");
+  });
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);
 })
